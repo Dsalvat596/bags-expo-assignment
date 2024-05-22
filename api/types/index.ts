@@ -42,4 +42,7 @@ export interface User {
   referral_count: number;
   invited_memberships: number;
   points: number;
+  rank?: number;
+  membershipPurchaseWallet?: string;
+  publicWallets?: string;
 }

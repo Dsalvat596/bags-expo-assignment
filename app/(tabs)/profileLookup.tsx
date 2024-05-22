@@ -72,7 +72,15 @@ export default function TabTwoScreen() {
               <Text style={styles.username}>{userResult.username}</Text>
             </View>
             <View style={styles.infoContainer}>
-              <Text style={styles.points}>{userResult.points} points</Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Text style={styles.points}>{userResult.points} points</Text>
+                <Text style={styles.rank}>{`Rank: ${userResult.rank}`}</Text>
+              </View>
               <View style={styles.metaContainer}>
                 <Text style={styles.metaText}>
                   Invites: {userResult.invites}
@@ -243,6 +251,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#888',
     marginVertical: 8,
+  },
+  rank: {
+    fontSize: 18,
+    color: '#888',
+    marginVertical: 8,
+    fontWeight: 'bold',
   },
   metaContainer: {
     flexDirection: 'row',
