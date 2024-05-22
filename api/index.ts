@@ -13,7 +13,7 @@ export const fetchLeaderboard = async () => {
 
 export const fetchUser = async (param: string) => {
   try {
-    const response = await axios.get(`${BASE_URL}/:${param}`);
+    const response = await axios.get(`${BASE_URL}/${param}`);
     return response.data;
   } catch (error) {
     throw error;

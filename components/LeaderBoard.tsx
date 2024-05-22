@@ -42,7 +42,9 @@ const LeaderBoard: React.FC<LeaderBoardProps> = ({ users, onPressUser }) => {
     <TouchableOpacity style={styles.item} onPress={() => console.log(item)}>
       <View style={styles.userInfo}>
         <View>
-          <Text>{`#${index + 1}`}</Text>
+          <Text style={{ fontWeight: 700, fontSize: 18 }}>{`#${
+            index + 1
+          }`}</Text>
         </View>
         <View>
           <Image
