@@ -1,20 +1,8 @@
 // LeaderBoard.tsx
 import React, { useState } from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { Image } from 'expo-image';
-
-interface User {
-  _id: string;
-  username: string;
-  picture: string;
-  points: number;
-}
+import { User } from '@/api/types';
 
 interface LeaderBoardProps {
   users: User[];
@@ -39,7 +27,7 @@ const LeaderBoard: React.FC<LeaderBoardProps> = ({ users, onPressUser }) => {
   };
 
   const renderItem = ({ item, index }: { item: User; index: number }) => (
-    <TouchableOpacity style={styles.item} onPress={() => console.log(item)}>
+    <View style={styles.item}>
       <View style={styles.userInfo}>
         <View>
           <Text style={{ fontWeight: 700, fontSize: 18 }}>{`#${
@@ -67,9 +55,9 @@ const LeaderBoard: React.FC<LeaderBoardProps> = ({ users, onPressUser }) => {
         </View>
       </View>
       <View style={styles.goContainer}>
-        <Text>Go</Text>
+        <Text>{item.ticker}</Text>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 
   return (

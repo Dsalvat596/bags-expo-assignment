@@ -28,7 +28,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name='explore'
+        name='profileLookup'
         options={{
           title: 'Profile Lookup',
           tabBarIcon: ({ color, focused }) => (

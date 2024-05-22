@@ -1,21 +1,9 @@
-import {
-  Image,
-  StyleSheet,
-  Platform,
-  ScrollView,
-  View,
-  Text,
-} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 import { fetchLeaderboard } from '../../api';
 import { useEffect, useState } from 'react';
 import { User } from '../../api/types';
 import LeaderBoard from '@/components/LeaderBoard';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   const [leaderBoard, setLeaderBoard] = useState<User[]>();
